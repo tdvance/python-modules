@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module graphs.graph</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="graphs.html"><font color="#ffffff">graphs</font></a>.graph</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python3.4/site-packages/graphs/graph.py">/usr/lib/python3.4/site-packages/graphs/graph.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="graphs.graph.html#Graph">Graph</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Graph">class <strong>Graph</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Graph">Graph</a>()&nbsp;-&gt;&nbsp;new&nbsp;directed&nbsp;graph&nbsp;with&nbsp;no&nbsp;vertices&nbsp;or&nbsp;edges<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Graph-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Graph-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Graph-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Graph-add_edge"><strong>add_edge</strong></a>(self, key, source_key, target_key, value=None)</dt><dd><tt>Add&nbsp;a&nbsp;new&nbsp;edge,&nbsp;with&nbsp;an&nbsp;optional&nbsp;value,&nbsp;to&nbsp;the&nbsp;graph,&nbsp;connecting<br>
+the&nbsp;specified&nbsp;source&nbsp;vertex&nbsp;key&nbsp;to&nbsp;the&nbsp;specified&nbsp;target&nbsp;vertex<br>
+key.&nbsp;&nbsp;The&nbsp;keys&nbsp;must&nbsp;be&nbsp;of&nbsp;hashable&nbsp;types.&nbsp;&nbsp;If&nbsp;the&nbsp;vertices&nbsp;are<br>
+not&nbsp;already&nbsp;in&nbsp;the&nbsp;graph,&nbsp;they&nbsp;will&nbsp;be&nbsp;added&nbsp;with&nbsp;no&nbsp;value.<br>
+If&nbsp;the&nbsp;edge&nbsp;key&nbsp;is&nbsp;already&nbsp;in&nbsp;the&nbsp;graph&nbsp;with&nbsp;the&nbsp;same&nbsp;source<br>
+and&nbsp;target&nbsp;vertex&nbsp;keys&nbsp;and&nbsp;the&nbsp;value&nbsp;is&nbsp;specified,&nbsp;the&nbsp;new<br>
+value&nbsp;will&nbsp;overwrite&nbsp;the&nbsp;old&nbsp;value.&nbsp;&nbsp;If&nbsp;the&nbsp;edge&nbsp;key&nbsp;is&nbsp;in&nbsp;the<br>
+graph&nbsp;with&nbsp;different&nbsp;source&nbsp;and&nbsp;vetex&nbsp;keys,&nbsp;an&nbsp;exception&nbsp;will<br>
+be&nbsp;raised.</tt></dd></dl>
+
+<dl><dt><a name="Graph-add_vertex"><strong>add_vertex</strong></a>(self, key, value=None)</dt><dd><tt>Add&nbsp;a&nbsp;new&nbsp;vertex,&nbsp;with&nbsp;an&nbsp;optional&nbsp;value,&nbsp;to&nbsp;the&nbsp;graph.&nbsp;&nbsp;The&nbsp;key<br>
+must&nbsp;be&nbsp;of&nbsp;a&nbsp;hashable&nbsp;type.&nbsp;&nbsp;If&nbsp;a&nbsp;vertex&nbsp;of&nbsp;the&nbsp;same&nbsp;key&nbsp;is<br>
+already&nbsp;in&nbsp;the&nbsp;graph&nbsp;and&nbsp;a&nbsp;value&nbsp;is&nbsp;specified,&nbsp;the&nbsp;new&nbsp;value<br>
+will&nbsp;replace&nbsp;the&nbsp;old&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="Graph-bfs_directed"><strong>bfs_directed</strong></a>(self, *start_vertices)</dt><dd><tt>Generate&nbsp;vertices&nbsp;that&nbsp;are&nbsp;in&nbsp;directed&nbsp;paths&nbsp;starting&nbsp;with&nbsp;one&nbsp;or<br>
+more&nbsp;of&nbsp;the&nbsp;start&nbsp;vertices&nbsp;in&nbsp;breadth-first&nbsp;order,&nbsp;following<br>
+direction.</tt></dd></dl>
+
+<dl><dt><a name="Graph-bfs_undirected"><strong>bfs_undirected</strong></a>(self, *start_vertices)</dt><dd><tt>Generate&nbsp;vertices&nbsp;connected&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;of&nbsp;the&nbsp;start&nbsp;vertices<br>
+in&nbsp;breadth-first&nbsp;order,&nbsp;ignoring&nbsp;direction.</tt></dd></dl>
+
+<dl><dt><a name="Graph-clear"><strong>clear</strong></a>(self)</dt><dd><tt>Remove&nbsp;all&nbsp;vertices,&nbsp;edges,&nbsp;and&nbsp;values&nbsp;from&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-copy"><strong>copy</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-degree"><strong>degree</strong></a>(self, vertex_key)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;vertices&nbsp;adjacent&nbsp;to&nbsp;the&nbsp;specified&nbsp;vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-dfs_directed"><strong>dfs_directed</strong></a>(self, *start_vertices)</dt><dd><tt>Generate&nbsp;vertices&nbsp;that&nbsp;are&nbsp;in&nbsp;directed&nbsp;paths&nbsp;starting&nbsp;with&nbsp;one&nbsp;or<br>
+more&nbsp;of&nbsp;the&nbsp;start&nbsp;vertices&nbsp;in&nbsp;depth-first&nbsp;order,&nbsp;following<br>
+direction.</tt></dd></dl>
+
+<dl><dt><a name="Graph-dfs_undirected"><strong>dfs_undirected</strong></a>(self, *start_vertices)</dt><dd><tt>Generate&nbsp;vertices&nbsp;connected&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;of&nbsp;the&nbsp;start&nbsp;vertices<br>
+in&nbsp;depth-first&nbsp;order,&nbsp;ignoring&nbsp;direction.</tt></dd></dl>
+
+<dl><dt><a name="Graph-from_tuple_set_tuple"><strong>from_tuple_set_tuple</strong></a>(self, tst)</dt><dd><tt>Given&nbsp;graph&nbsp;data&nbsp;in&nbsp;the&nbsp;form&nbsp;(vertices,&nbsp;edges),&nbsp;where&nbsp;vertices&nbsp;is<br>
+an&nbsp;iterable&nbsp;of&nbsp;tuples&nbsp;(vertex_key,&nbsp;vertex_value)&nbsp;and&nbsp;edges&nbsp;is<br>
+an&nbsp;iterable&nbsp;of&nbsp;tuples&nbsp;(edge_key,&nbsp;source_vertex_key,<br>
+target_vertex_key,&nbsp;edge_value),&nbsp;load&nbsp;the&nbsp;data&nbsp;into&nbsp;the&nbsp;current<br>
+graph.&nbsp;&nbsp;Collisions&nbsp;of&nbsp;edge&nbsp;keys&nbsp;can&nbsp;cause&nbsp;this&nbsp;to&nbsp;fail.&nbsp;&nbsp;Using<br>
+the&nbsp;clear&nbsp;method&nbsp;on&nbsp;the&nbsp;graph&nbsp;first&nbsp;will&nbsp;prevent&nbsp;this.</tt></dd></dl>
+
+<dl><dt><a name="Graph-get_edge"><strong>get_edge</strong></a>(self, key)</dt><dd><tt>Get&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;edge&nbsp;having&nbsp;the&nbsp;specified&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-get_source"><strong>get_source</strong></a>(self, edge_key)</dt><dd><tt>Return&nbsp;the&nbsp;source&nbsp;vertex&nbsp;of&nbsp;the&nbsp;edge&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-get_target"><strong>get_target</strong></a>(self, edge_key)</dt><dd><tt>Return&nbsp;the&nbsp;target&nbsp;vertex&nbsp;of&nbsp;the&nbsp;edge&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-get_vertex"><strong>get_vertex</strong></a>(self, key)</dt><dd><tt>Get&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;vertex&nbsp;having&nbsp;the&nbsp;specified&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-indegree"><strong>indegree</strong></a>(self, vertex_key)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;incoming&nbsp;edges&nbsp;to&nbsp;the&nbsp;specified&nbsp;vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-is_adjacent"><strong>is_adjacent</strong></a>(self, source_key, target_key)</dt><dd><tt>Return&nbsp;true&nbsp;if&nbsp;the&nbsp;specified&nbsp;source&nbsp;vertex&nbsp;key&nbsp;is&nbsp;adjacent&nbsp;to&nbsp;the<br>
+specified&nbsp;target&nbsp;vertex&nbsp;key.</tt></dd></dl>
+
+<dl><dt><a name="Graph-is_edge"><strong>is_edge</strong></a>(self, key)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;key&nbsp;is&nbsp;of&nbsp;an&nbsp;edge&nbsp;in&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-is_vertex"><strong>is_vertex</strong></a>(self, key)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;key&nbsp;is&nbsp;of&nbsp;a&nbsp;vertex&nbsp;in&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_connections"><strong>iter_connections</strong></a>(self, source_key, target_key)</dt></dl>
+
+<dl><dt><a name="Graph-iter_edge_source_target_value_tuple"><strong>iter_edge_source_target_value_tuple</strong></a>(self)</dt><dd><tt>Generate&nbsp;all&nbsp;edge&nbsp;key-source-target-value&nbsp;quadruples&nbsp;from&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_edge_values"><strong>iter_edge_values</strong></a>(self)</dt><dd><tt>Generate&nbsp;the&nbsp;values&nbsp;of&nbsp;the&nbsp;edges&nbsp;of&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_edges"><strong>iter_edges</strong></a>(self)</dt><dd><tt>Generate&nbsp;the&nbsp;edge&nbsp;keys</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_incoming_edges"><strong>iter_incoming_edges</strong></a>(self, vertex_key)</dt><dd><tt>Generate&nbsp;the&nbsp;edge&nbsp;keys&nbsp;entering&nbsp;the&nbsp;specified&nbsp;vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_neighbors"><strong>iter_neighbors</strong></a>(self, vertex_key)</dt><dd><tt>Generate&nbsp;the&nbsp;vertex&nbsp;keys&nbsp;adjacent&nbsp;to&nbsp;the&nbsp;specified&nbsp;vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_outgoing_edges"><strong>iter_outgoing_edges</strong></a>(self, vertex_key)</dt><dd><tt>Generate&nbsp;the&nbsp;edge&nbsp;keys&nbsp;coming&nbsp;out&nbsp;of&nbsp;the&nbsp;specified&nbsp;vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_source_vertices"><strong>iter_source_vertices</strong></a>(self, vertex_key)</dt><dd><tt>Generate&nbsp;the&nbsp;source&nbsp;vertex&nbsp;keys&nbsp;of&nbsp;edges&nbsp;entering&nbsp;the&nbsp;specified<br>
+vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_target_vertices"><strong>iter_target_vertices</strong></a>(self, vertex_key)</dt><dd><tt>Generate&nbsp;the&nbsp;target&nbsp;vertex&nbsp;keys&nbsp;of&nbsp;edges&nbsp;coming&nbsp;out&nbsp;of&nbsp;the<br>
+specified&nbsp;vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_vertex_value_tuple"><strong>iter_vertex_value_tuple</strong></a>(self)</dt><dd><tt>Generate&nbsp;all&nbsp;vertex&nbsp;key-value&nbsp;pairs&nbsp;from&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_vertex_values"><strong>iter_vertex_values</strong></a>(self)</dt><dd><tt>Generate&nbsp;the&nbsp;values&nbsp;of&nbsp;the&nbsp;vertices&nbsp;of&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-iter_vertices"><strong>iter_vertices</strong></a>(self)</dt><dd><tt>Generate&nbsp;the&nbsp;vertex&nbsp;keys</tt></dd></dl>
+
+<dl><dt><a name="Graph-num_connections"><strong>num_connections</strong></a>(self, source_key, target_key)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;edges&nbsp;from&nbsp;the&nbsp;source&nbsp;vertex&nbsp;key&nbsp;to&nbsp;the&nbsp;target<br>
+vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-num_edges"><strong>num_edges</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;edges&nbsp;in&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-num_vertices"><strong>num_vertices</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;vertices&nbsp;in&nbsp;the&nbsp;graph</tt></dd></dl>
+
+<dl><dt><a name="Graph-outdegree"><strong>outdegree</strong></a>(self, vertex_key)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;outgoing&nbsp;edges&nbsp;from&nbsp;the&nbsp;specified&nbsp;vertex&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="Graph-remove_edge"><strong>remove_edge</strong></a>(self, key)</dt><dd><tt>Remove&nbsp;the&nbsp;edge&nbsp;having&nbsp;the&nbsp;specified&nbsp;key,&nbsp;and&nbsp;return&nbsp;the&nbsp;value,&nbsp;if<br>
+any.</tt></dd></dl>
+
+<dl><dt><a name="Graph-remove_vertex"><strong>remove_vertex</strong></a>(self, key)</dt><dd><tt>Remove&nbsp;the&nbsp;vertex&nbsp;with&nbsp;the&nbsp;specified&nbsp;key&nbsp;and&nbsp;return&nbsp;the&nbsp;value,&nbsp;if<br>
+any.&nbsp;&nbsp;Any&nbsp;edges&nbsp;incident&nbsp;with&nbsp;the&nbsp;vertex&nbsp;will&nbsp;be&nbsp;deleted.</tt></dd></dl>
+
+<dl><dt><a name="Graph-to_tuple_set_tuple"><strong>to_tuple_set_tuple</strong></a>(self)</dt><dd><tt>Return&nbsp;data&nbsp;of&nbsp;the&nbsp;graph,&nbsp;in&nbsp;the&nbsp;form&nbsp;(vertices,&nbsp;edges),&nbsp;where<br>
+vertices&nbsp;is&nbsp;a&nbsp;set&nbsp;of&nbsp;tuples&nbsp;(vertex_key,&nbsp;vertex_value)&nbsp;and<br>
+edges&nbsp;is&nbsp;a&nbsp;set&nbsp;of&nbsp;tuples&nbsp;(edge_key,&nbsp;source_vertex_key,<br>
+target_vertex_key,&nbsp;edge_value).</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
