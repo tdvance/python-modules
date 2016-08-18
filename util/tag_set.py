@@ -28,7 +28,7 @@ class TagSet:
 
     def fraction_in(self, tags):
         total = len(self._tags)
-        if (total == 0):
+        if not total:
             return 1.0
         count = 0.0
         for t in self:
@@ -46,3 +46,8 @@ class TagSet:
         l = [str(x) for x in self]
         l.sort()
         return '{' + ', '.join(l) + '}'
+
+    def __repr__(self):
+        l = [repr(x) for x in self]
+        l.sort()
+        return 'TagSet(' + ', '.join(l) + ')'
